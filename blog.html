@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Laika's Gallery</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fdf6f8;
+      padding: 2rem;
+      color: #5a3e36;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #b2748f;
+    }
+    .intro {
+      max-width: 800px;
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 1.1rem;
+      color: #6e4e44;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      max-width: 1000px;
+    }
+    .photo-card {
+      background-color: #fff;
+      border-radius: 20px;
+      box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+      overflow: hidden;
+      border: 4px solid #f4dde1;
+    }
+    .photo-card img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-bottom: 1px solid #f4dde1;
+    }
+    .caption {
+      padding: 1rem;
+      text-align: center;
+      font-size: 1rem;
+      color: #54362a;
+    }
+    .back-btn {
+      margin-top: 3rem;
+      padding: 0.7rem 1.4rem;
+      background-color: #cd8b76;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>My Life in Snapshots</h1>
+  <div class="intro">
+    Through volleyball, nature, and motorcycles, I capture beauty in motion and calm. These photos tell my story.
+  </div>
+  <div class="gallery">
+    <div class="photo-card">
+      <img src="download.jpg" alt="Nature - Waterfall">
+      <div class="caption">Moments of peace by the falls — my love for nature keeps me grounded.</div>
+    </div>
+    <div class="photo-card">
+      <img src="Laikapics-volleyball.jpg" alt="Volleyball">
+      <div class="caption">A proud volleyball win — this sport has shaped who I am.</div>
+    </div>
+    <div class="photo-card">
+      <img src="Laikapics-motor.jpg" alt="Motorcycle">
+      <div class="caption">My freedom machine — riding lets me explore and feel alive.</div>
+    </div>
+  </div>
+  <a class="back-btn" href="index.html">← Back to Home</a>
+</body>
+</html>

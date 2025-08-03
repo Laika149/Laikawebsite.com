@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Laika Meitch</title>
+  
+
+
+<style>
+  .share-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #fce4ec;
+    border: 2px solid #d7ccc8;
+    border-radius: 10px;
+    padding: 12px;
+    z-index: 999;
+    box-shadow: 0 0 10px rgba(0,0,0,0.15);
+    text-align: center;
+  }
+  .share-container input {
+    border: none;
+    background: transparent;
+    width: 180px;
+    color: #6d4c41;
+    font-size: 14px;
+    text-align: center;
+  }
+  .share-container button {
+    background-color: #f8bbd0;
+    border: none;
+    padding: 6px 10px;
+    margin-top: 5px;
+    color: #4e342e;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .share-container .back-btn {
+    display: block;
+    margin-top: 10px;
+    font-size: 13px;
+    color: #4e342e;
+    text-decoration: none;
+  }
+</style>
+
+<div class="share-container">
+  <div><strong>🔗 Share My Page</strong></div>
+  <input type="text" id="shareLink" value="https://Laikapage.com" readonly>
+  <button onclick="copyLink()">📋 Copy</button>
+  <a class="back-btn" href="index.html">← Back to Home</a>
+</div>
+
+<script>
+  function copyLink() {
+    var copyText = document.getElementById("shareLink");
+    copyText.select();
+    copyText.setSelectionRange(0, 99999);
+    document.execCommand("copy");
+    alert("Link copied: " + copyText.value);
+  }
+</script>
+
+</body>
+</html>
