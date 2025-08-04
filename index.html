@@ -1,67 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Laika Meitch</title>
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome to My Vintage Space</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
+    body {
+      background: url('nebula001.jpg') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Georgia', serif;
+      color: #fdf1f4;
+      text-shadow: 1px 1px 2px #5c4033;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
 
-<style>
-  .share-container {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    background-color: #fce4ec;
-    border: 2px solid #d7ccc8;
-    border-radius: 10px;
-    padding: 12px;
-    z-index: 999;
-    box-shadow: 0 0 10px rgba(0,0,0,0.15);
-    text-align: center;
-  }
-  .share-container input {
-    border: none;
-    background: transparent;
-    width: 180px;
-    color: #6d4c41;
-    font-size: 14px;
-    text-align: center;
-  }
-  .share-container button {
-    background-color: #f8bbd0;
-    border: none;
-    padding: 6px 10px;
-    margin-top: 5px;
-    color: #4e342e;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  .share-container .back-btn {
-    display: block;
-    margin-top: 10px;
-    font-size: 13px;
-    color: #4e342e;
-    text-decoration: none;
-  }
-</style>
+    header {
+      padding: 2rem;
+      text-align: center;
+      background-color: rgba(92, 64, 51, 0.6);
+      border-bottom: 2px solid #f4c2c2;
+    }
 
-<div class="share-container">
-  <div><strong>🔗 Share My Page</strong></div>
-  <input type="text" id="shareLink" value="https://Laikapage.com" readonly>
-  <button onclick="copyLink()">📋 Copy</button>
-  <a class="back-btn" href="index.html">← Back to Home</a>
-</div>
+    header h1 {
+      font-size: 3rem;
+      letter-spacing: 1.5px;
+      color: #ffe4e1;
+      text-shadow: 2px 2px 4px #3e2c27;
+    }
 
-<script>
-  function copyLink() {
-    var copyText = document.getElementById("shareLink");
-    copyText.select();
-    copyText.setSelectionRange(0, 99999);
-    document.execCommand("copy");
-    alert("Link copied: " + copyText.value);
-  }
-</script>
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: rgba(245, 222, 179, 0.3);
+      padding: 1rem 0;
+      border-bottom: 1px solid #e6b7b7;
+    }
 
+    nav a {
+      margin: 0 1.5rem;
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: #ffd1dc;
+      border-bottom: 2px solid transparent;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      border-bottom: 2px solid #8b5e3c;
+      color: #fff5f5;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 3rem 2rem;
+      background-color: rgba(255, 240, 245, 0.1);
+    }
+
+    main p {
+      font-size: 1.4rem;
+      max-width: 700px;
+      line-height: 1.8;
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 1.5rem;
+      border-radius: 10px;
+      border: 1px solid rgba(255, 192, 203, 0.4);
+      color: #ffe4e1;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.85rem;
+      background-color: rgba(92, 64, 51, 0.5);
+      color: #f8e8e8;
+      border-top: 1px solid #dcb5b5;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Vintage Space</h1>
+  </header>
+
+  <nav>
+    <a href="about.html">About Me</a>
+    <a href="blog.html">My Hobbies</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <main>
+    <p>
+      Welcome to my quiet little corner of the world. Learn about me, explore the things I love, or drop me a message.
+    </p>
+  </main>
+
+  <footer>
+    &copy; 2025 Your Name. Hand-coded with love and vintage coffee.
+  </footer>
 </body>
 </html>
